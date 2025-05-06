@@ -1,0 +1,23 @@
+{
+  "name": "inkheap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niallantony/InkHeap-App.git"
+  },
+  "keywords": [
+    "front-end",
+    "inkheap"
+  ],
+  "author": "niall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niallantony/InkHeap-App/issues"
+  },
+  "homepage": "https://github.com/niallantony/InkHeap-App#readme",
+  "description": ""
+}
