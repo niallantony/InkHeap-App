@@ -1,4 +1,4 @@
-import {CardBody, Text, CardRoot, CardTitle, CardDescription} from "@chakra-ui/react";
+import {CardBody, Text, CardRoot, CardTitle} from "@chakra-ui/react";
 import type {Book} from "../types/Book.ts";
 
 interface BookProps {
@@ -14,14 +14,12 @@ export const BookCard = ({book} : BookProps) => {
                 <Text>
                     {book.author}
                 </Text>
-                <CardDescription>
-                    <Text>
-                        Published: {book.year}
-                    </Text>
-                    <Text>
-                        Pages: {book.pages}
-                    </Text>
-                </CardDescription>
+                <Text>
+                    Published: {book.year}
+                </Text>
+                <Text>
+                    Pages: {book.pages}
+                </Text>
             </CardBody>
         </CardRoot>
     )
