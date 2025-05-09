@@ -4,6 +4,7 @@ import {Library} from "./components/Library.tsx";
 import {ToolBar} from "./components/ToolBar.tsx";
 import {useState} from "react";
 import {BookForm} from "./components/BookForm.tsx";
+import {Register} from "./components/Register.tsx";
 
 function App() {
     const [page, setPage] = useState(<Library />)
@@ -22,7 +23,10 @@ function App() {
             </Text>
             </Container>
             {page}
-            <ToolBar addButton={() => setPage(<BookForm />)}/>
+            <ToolBar
+                addButton={() => setPage(<BookForm />)}
+                registerButton={() => setPage(<Register/>)}
+            />
         </>
   )
 }

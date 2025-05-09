@@ -9,10 +9,6 @@ export const BookForm = () => {
     const [description, setDescription] = useState("")
     const [status, setStatus] = useState<string[]>([])
 
-    const valueOf = (e: React.ChangeEvent<HTMLInputElement>) => {
-        return e.target.value;
-    }
-
     const statuses = createListCollection({
         items: [
             {label: "Read", value: "READ"},
@@ -36,7 +32,7 @@ export const BookForm = () => {
                     <Input
                         variant="flushed"
                         value={title}
-                        onChange={(e) => setTitle(valueOf(e))}
+                        onChange={(e) => setTitle(e.target.value)}
                     />
                     <Field.ErrorText>Title is required.</Field.ErrorText>
                 </Field.Root>
@@ -48,7 +44,7 @@ export const BookForm = () => {
                     <Input
                         variant="flushed"
                         value={author}
-                        onChange={(e) => setAuthor(valueOf(e))}
+                        onChange={(e) => setAuthor(e.target.value)}
                     />
                     <Field.ErrorText>Title is required.</Field.ErrorText>
                 </Field.Root>
@@ -61,7 +57,7 @@ export const BookForm = () => {
                             <Input
                                 variant="flushed"
                                 value={pages}
-                                onChange={(e) => setPages(valueOf(e))}
+                                onChange={(e) => setPages(e.target.value)}
                             />
                             <Field.ErrorText>Title is required.</Field.ErrorText>
                         </Field.Root>
@@ -73,7 +69,7 @@ export const BookForm = () => {
                             <Input
                                 variant="flushed"
                                 value={year}
-                                onChange={(e) => setYear(valueOf(e))}
+                                onChange={(e) => setYear(e.target.value)}
                             />
                             <Field.ErrorText>Title is required.</Field.ErrorText>
                         </Field.Root>
@@ -85,7 +81,7 @@ export const BookForm = () => {
                     <Textarea
                         placeholder="Description..."
                         value={description}
-                        onChange={(e) => setDescription(valueOf(e))}
+                        onChange={(e) => setDescription(e.target.value)}
                     />
                 </Field.Root>
                 <Select.Root

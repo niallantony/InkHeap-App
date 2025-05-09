@@ -5,10 +5,12 @@ import {BookCard} from "./Book.tsx";
 
 export const Library = () => {
     const [books, setBooks] = useState<Book[]>([])
+
     useEffect(() => {
         fetchBooks()
         console.log(books)
     }, [])
+
     const fetchBooks = async () => {
         fetch("http://localhost:8080/books", {
             method: "GET",
